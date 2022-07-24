@@ -17,6 +17,10 @@ namespace ThanhToan247.xyz
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(180);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,6 +30,8 @@ namespace ThanhToan247.xyz
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSession();
 
             app.UseStaticFiles();
 

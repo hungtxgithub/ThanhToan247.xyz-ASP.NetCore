@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -91,20 +92,25 @@
                 <span class="tooltip">Settings</span>
             </li>
         </ul>
+        @if (Context.Session.GetString("Role") != null)
+        {
+            <div class="profile-content">
+                <div class="profile">
+                    <div class="profile-details">
 
-        <div class="profile-content">
-            <div class="profile">
-                <div class="profile-details">
-
-                    <img src="https://media.wired.com/photos/5b17381815b2c744cb650b5f/master/pass/GettyImages-134367495.jpg" alt="">
-                    <div class="name-job">
-                        <div class="name">hungtienxinh</div>
-                        <div class="job">ThanhToan247.xyz</div>
+                        <img src="https://media.wired.com/photos/5b17381815b2c744cb650b5f/master/pass/GettyImages-134367495.jpg" alt="">
+                        <div class="name-job">
+                            <div class="name">hungtienxinh</div>
+                            <div class="job">ThanhToan247.xyz</div>
+                        </div>
                     </div>
+                    <i style="cursor: pointer" onclick="window.location.href = 'Logout'" class='bx bx-log-out' id="log-out"></i>
                 </div>
-                <i style="cursor: pointer" onclick="window.location.href = 'Logout'" class='bx bx-log-out' id="log-out"></i>
             </div>
-        </div>
+        }
+
+
+
     </div>
     <div class="home-content">
         <div class="navbardiv">
@@ -115,25 +121,40 @@
                         <a href="Recharge">Nạp tiền</a>
                         <a href="Order">Đơn hàng</a>
                         <a href="Contact">Liên hệ</a>
-                        <a href="Manage">Quản lý</a>
+
+                        @if (Context.Session.GetString("Role") == "True")
+                        {
+                            <a href="Manage">Quản lý</a>
+
+                        }
                         <div class="animation start-home"></div>
                     </nav>
                 </div>
             </div>
 
-            <div class="dropdown">
-                <div>
-                    <div class="dropbtn"><img class="img-avatar" src="https://i.ibb.co/qsV4sms/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c4409623-46439181152978.png" alt=""><span style="margin-left: 5px;">hungtienxinh</span></div>
-                </div>
-                <div class="dropdown-content">
-                    <span class="square"></span>
-                    <a href="Profile"><span><img class="img-cart" src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" style="margin-bottom: -9px;">Profile</span></a>
-                    <a href="Login"><span><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-logout-ui-dreamstale-lineal-dreamstale.png" style="margin-bottom: -9px;" />Logout</span></a>
-                </div>
+            @if (Context.Session.GetString("Role") != null)
+            {
 
-            </div>
 
-            <div class="div-login" onclick="window.location.href = 'Login'"><button class="btn-login">LOGIN</button></div>
+                <div class="dropdown">
+                    <div>
+                        <div class="dropbtn"><img class="img-avatar" src="https://i.ibb.co/qsV4sms/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c4409623-46439181152978.png" alt=""><span style="margin-left: 5px;">hungtienxinh</span></div>
+                    </div>
+                    <div class="dropdown-content">
+                        <span class="square"></span>
+                        <a href="Profile"><span><img class="img-cart" src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" style="margin-bottom: -9px;">Profile</span></a>
+                        <a href="Login"><span><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-logout-ui-dreamstale-lineal-dreamstale.png" style="margin-bottom: -9px;" />Logout</span></a>
+                    </div>
+
+                </div>
+            }
+
+
+
+            @if (Context.Session.GetString("Role") == null)
+            {
+                <div class="div-login" onclick="window.location.href = 'Login'"><button class="btn-login">LOGIN</button></div>
+            }
         </div>
         @RenderBody()
 
