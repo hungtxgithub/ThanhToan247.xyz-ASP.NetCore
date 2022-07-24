@@ -10,7 +10,7 @@ namespace ThanhToan247.xyz.Controllers
     {
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Login");
+            return View();
         }
     }
 }
