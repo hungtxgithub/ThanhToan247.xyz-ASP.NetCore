@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link href="~/css/managestyle.css" rel="stylesheet" />
+<div>
+
+
+
+
+    <ul class="ul-manage">
+        <li class="li-manage active-manage" onclick="window.location = 'accountmanagement'">Quản lý tài khoản</li>
+        <li class="li-manage " onclick="window.location = 'rechargemanagement'">Quản lý nạp tiền</li>
+        <li class="li-manage " onclick="window.location = 'productmanagement'">Quản lý sản phẩm</li>
+        <li class="li-manage " onclick="window.location = 'transactionmanagement'">Quản lý giao dịch</li>
+        <li class="li-manage " onclick="window.location = 'contactmanagement'">Quản lý liên hệ</li>
+    </ul>
+
+
+
+
+    <div class="container">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>UserID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>RemainingMoney</th>
+                            <th>TotalMoneyLoaded</th>
+                            <th>Discount</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr>
+                            <td>37</td>
+                            <td>admin</td>
+                            <td>hungnthe153039@fpt.edu.vn</td>
+                            <td>43,546đ</td>
+                            <td>351,000đ</td>
+                            <td>3%</td>
+                            <td>Customer</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="editaccount?username=admin" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                <a href="delete?id=admin" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>40</td>
+                            <td>user</td>
+                            <td>hungnthe153039@fpt.edu.vn</td>
+                            <td>50,000đ</td>
+                            <td>561,000đ</td>
+                            <td>3%</td>
+                            <td>Customer</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="editaccount?username=user" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                <a href="delete?id=user" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>41</td>
+                            <td>user1</td>
+                            <td>hung11@gmail.com</td>
+                            <td>555đ</td>
+                            <td>51,000đ</td>
+                            <td>1%</td>
+                            <td>Customer</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="editaccount?username=user1" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                <a href="delete?id=user1" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>42</td>
+                            <td>test</td>
+                            <td>hungnthe150339@fpt.edu.vn</td>
+                            <td>25,000đ</td>
+                            <td>515,000đ</td>
+                            <td>5%</td>
+                            <td>Admin</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="editaccount?username=test" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                <a href="delete?id=test" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                            </td>
+                        </tr>
+
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

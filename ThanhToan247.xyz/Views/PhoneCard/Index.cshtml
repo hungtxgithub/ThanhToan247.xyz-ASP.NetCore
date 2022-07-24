@@ -1,0 +1,115 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/cardstyle.css" rel="stylesheet" />
+<div class="product-container">
+    <h1 class="h1_title">Mua thẻ điện thoại</h1>
+    <div class="cncc">
+        <h2>Chọn nhà cung cấp: </h2>
+
+        <img style="transform: scale(1.2);border: 1px solid rgb(187, 224, 84);" onclick="window.location = '?supplierID=1';" src="https://hqpay.vn/storage/images/wD3OAX53sQ_1625037689.png" alt="">
+
+        <img onclick="window.location = '?supplierID=2';" src="https://hqpay.vn/storage/images/5oBfqagH5V_1619539822.png" alt="">
+
+        <img onclick="window.location = '?supplierID=3';" src="https://hqpay.vn/storage/images/iFMbkulr4w_1619540012.png" alt="">
+
+        <img onclick="window.location = '?supplierID=4';" src="https://hqpay.vn/storage/images/EJf2KN04b6_1626426501.png" alt="">
+
+        <img onclick="window.location = '?supplierID=5';" src="https://hqpay.vn/storage/images/KWPSKsgxdG_1626426621.png" alt="">
+
+    </div>
+
+
+    <div class="cmg">
+        <hr><br>
+        <h2>Chọn mệnh giá: </h2>
+        <form name="f1" method="get" action="cart">
+            <input style="display: none" name="supplierID" value="1">
+            <input style="display: none" name="priceID" value="2">
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=1'">
+                <div class="div-gia1">10.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">9.900&nbsp;₫</span></div>
+            </div>
+
+            <div style="border: 1px solid rgb(76, 97, 20);transform: scale(1.08);box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;background-color: papayawhip" class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=2'">
+                <div class="div-gia1">20.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">19.600&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=3'">
+                <div class="div-gia1">30.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">29.400&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=4'">
+                <div class="div-gia1">50.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">48.500&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=5'">
+                <div class="div-gia1">100.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">95.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=6'">
+                <div class="div-gia1">200.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">190.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=7'">
+                <div class="div-gia1">300.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">285.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=8'">
+                <div class="div-gia1">500.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">475.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=1&amp;priceID=9'">
+                <div class="div-gia1">1.000.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">950.000&nbsp;₫</span></div>
+            </div>
+
+
+
+
+            <br>
+            <div class="quantity-card">
+                <h3>Số lượng thẻ</h3>
+                <input onclick="decreaseCount(event, this)" class="btn-quan" type="button" value="-">
+                <input name="quantity" class="inp-quan" type="text" value="1">
+                <input onclick="increaseCount(event, this)" class="btn-quan" type="button" value="+">
+            </div>
+
+            <div class="add-Product">
+                <input class="Buy" type="submit" value="Mua Ngay">
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        input.value = value;
+    }
+
+    function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10);
+        if (value > 1) {
+            value = isNaN(value) ? 0 : value;
+            value--;
+            input.value = value;
+        }
+    }
+</script>

@@ -1,0 +1,162 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .container:before {
+        content: none;
+    }
+</style>
+<div class="container py-5">
+
+    <div class="row">
+        <div class="col-lg-12 mx-auto">
+            <div class="bg-white rounded-lg p-5">
+                <!-- Credit card form tabs -->
+                <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-transaction" class="nav-link active rounded-pill">
+                            <i class="fa fa-university"></i> LỊCH SỦ NẠP TIỀN
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                            <i class="fa fa-university"></i> NẠP QUA NGÂN HÀNG
+
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <!-- End -->
+                <!-- Credit card form content -->
+                <div class="row tab-content">
+                    <!-- credit card info-->
+                    <!-- End -->
+                    <!-- Paypal info -->
+                    <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="nav-tab-bank" class="tab-pane fade">
+                        <form action="addemployee" method="post">
+                            <div class="modal-header">
+                                <h4 class="modal-title">NẠP TIỀN QUA NGÂN HÀNG TỰ ĐỘNG</h4>
+                            </div>
+                            <div class="modal-body">
+                                <table class="">
+                                    <tbody>
+                                        <tr>
+                                            <td>Ngân hàng:</td>
+                                            <td class="font-weight-bold text-primary">Vietcombank</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Số Tài khoản:</td>
+                                            <td class="font-weight-bold text-primary">0291000350547</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chủ Tài Khoản:&nbsp;&nbsp;&nbsp;</td>
+                                            <td class="font-weight-bold">Nguyễn Trọng Hùng</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nội dung:</td>
+                                            <td class="font-weight-bold text-danger">TT24737</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="nav-tab-transaction" class="tab-pane fade show active">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã giao dịch</th>
+                                    <th>Số tiền nhận được</th>
+                                    <th>Thời gian</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>813253.15022</td>
+                                    <td>+ 43,546đ</td>
+                                    <td>2022-02-13 00:00:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>MBVCB.175106</td>
+                                    <td>+ 50,000đ</td>
+                                    <td>2020-01-01 23:15:04</td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>619965.14022</td>
+                                    <td>+ 555đ</td>
+                                    <td>2020-01-01 00:00:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>612945.14022</td>
+                                    <td>+ 25,000đ</td>
+                                    <td>2020-01-01 00:00:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>604498.14022</td>
+                                    <td>+ 51,000đ</td>
+                                    <td>2020-01-01 00:00:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>6</td>
+                                    <td>739274.15022</td>
+                                    <td>+ 10,000đ</td>
+                                    <td>2020-01-01 00:00:00</td>
+                                </tr>
+
+                                <tr>
+                                    <td>7</td>
+                                    <td>487258.15022</td>
+                                    <td>+ 10,000đ</td>
+                                    <td>2020-01-01 00:00:00</td>
+                                </tr>
+
+
+
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination" style="float: right">
+                            <li class="page-item"><a class="page-link" href="?page=1">Previous</a></li>
+
+                            <li class="page-item active"><a class="page-link" href="?page=1">1</a></li>
+
+                            <li class="page-item"><a class="page-link" href="?page=1">Next</a></li>
+                        </ul>
+
+
+                    </div>
+                    <!-- End -->
+                </div>
+                <!-- End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>

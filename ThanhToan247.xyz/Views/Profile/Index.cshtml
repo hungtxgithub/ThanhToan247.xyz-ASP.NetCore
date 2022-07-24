@@ -1,0 +1,78 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/profilestyle.css" rel="stylesheet" />
+
+<div class="div-profile">
+    <div class="div-1">
+        <div class="left-div">
+            <img class="imgclass" src="https://s3.ap-northeast-1.amazonaws.com/h.files/images/1642777165863_idBGvXsiOb.jpg" alt="image">
+        </div>
+        <div class="right-div">
+            <img class="imgclass" src="../img/email.png" alt="image"> <span>hungnthe153039@fpt.edu.vn</span>
+            <img class="imgclass" src="../img/handshake.png" alt="image">
+
+            <span>Quản trị viên</span>
+
+
+
+        </div>
+    </div>
+    <hr>
+    <div class="div-2">
+        <span class="icon-div2"><img src="../img/piggy-bank.png" alt=""><span>Số Dư: 14,156,197 VNĐ</span></span>
+        <span class="icon-div2"><img src="../img/diagram.png" alt=""><span>Đã Nạp: 15,000,000 VNĐ</span></span>
+        <span class="icon-div2"><img src="../img/giftbox.png" alt=""><span>Chiết khấu: 3.0%</span></span>
+    </div>
+</div>
+<br>
+<br>
+<div style="display: flex; justify-content: center;">
+    <form action="profile" class="form" method="post">
+        <h3 style="margin: 0;">Cập nhật thông tin</h3>
+        <hr>
+        <div style="display: flex; align-items: center;">
+            <img style=" border-radius: 8px;width: 180px;height: 180px; margin-right: 15px;" src="https://s3.ap-northeast-1.amazonaws.com/h.files/images/1642777165863_idBGvXsiOb.jpg" alt=""><br>
+            <button>ChangeImage</button>
+        </div>
+        <br>
+        <div class="form__div">
+            <input style="background-color: rgb(0 0 0 / 6%);" value="admin" class="form__input" placeholder=" " disabled="">
+            <label for="" class="form__label">Tài khoản</label>
+        </div>
+
+        <div class="form__div">
+            <input name="email" value="hungnthe153039@fpt.edu.vn" type="text" class="form__input" placeholder=" ">
+            <label for="" class="form__label">Email</label>
+        </div>
+        <div class="form__div">
+            <input name="cfPassword" type="password" class="form__input" placeholder=" ">
+            <label for="" class="form__label">Xác nhận mật khẩu</label>
+        </div>
+        <input type="submit" class="form__button" value="Cập nhật">
+    </form>
+    <form action="profile" class="form" method="post">
+        <h3 style="margin: 0;">Thay đổi mật khẩu</h3>
+        <hr>
+        <img style="display: flex;margin: 0 auto;width: 180px;height: 180px;" src="../img/secure.png" alt=""><br>
+
+        <div class="form__div">
+            <input name="oldpassword" type="password" class="form__input" placeholder=" ">
+            <label for="" class="form__label">Mật khẩu cũ</label>
+        </div>
+
+        <div class="form__div">
+            <input name="newpassword" type="password" class="form__input" placeholder=" ">
+            <label for="" class="form__label">Mật khẩu mới</label>
+        </div>
+        <div class="form__div">
+            <input name="re-newpassword" type="password" class="form__input" placeholder=" ">
+            <label for="" class="form__label">Xác nhận mật khẩu</label>
+        </div>
+        <input type="submit" class="form__button" value="Thay đổi">
+    </form>
+</div>

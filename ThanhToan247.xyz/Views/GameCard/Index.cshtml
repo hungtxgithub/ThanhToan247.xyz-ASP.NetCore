@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/cardstyle.css" rel="stylesheet" />
+<div class="product-container">
+    <h1 class="h1_title">Mua thẻ game</h1>
+    <div class="cncc">
+        <h2>Chọn nhà cung cấp: </h2>
+
+        <img onclick="window.location = '?supplierID=6';" src="https://hqpay.vn/storage/images/uK1M2D5bSv_1619539885.png" alt="">
+
+        <img onclick="window.location = '?supplierID=7';" src="https://hqpay.vn/storage/images/9UOc6zPMGz_1619539912.png" alt="">
+
+        <img onclick="window.location = '?supplierID=8';" src="https://hqpay.vn/storage/images/sgK6t0HyRw_1619539788.png" alt="">
+
+        <img onclick="window.location = '?supplierID=9';" src="https://hqpay.vn/storage/images/HS3qP8bwN9_1625038017.png" alt="">
+
+        <img onclick="window.location = '?supplierID=10';" src="https://hqpay.vn/storage/images/IYno8G2l6t_1625038053.png" alt="">
+
+        <img style="transform: scale(1.2);border: 1px solid rgb(187, 224, 84);" onclick="window.location = '?supplierID=11';" src="https://hqpay.vn/storage/images/mepJKk53Xy_1619539541.png" alt="">
+
+        <img onclick="window.location = '?supplierID=12';" src="https://hqpay.vn/storage/images/7YPCZMmAde_1619539870.png" alt="">
+
+        <img onclick="window.location = '?supplierID=13';" src="https://hqpay.vn/storage/images/m0oI1BgUle_1619539974.png" alt="">
+
+        <img onclick="window.location = '?supplierID=14';" src="https://hqpay.vn/storage/images/vN4hG60byz_1619539768.png" alt="">
+
+        <img onclick="window.location = '?supplierID=15';" src="https://hqpay.vn/storage/images/xJpX9GoS2j_1625037827.png" alt="">
+
+        <img onclick="window.location = '?supplierID=16';" src="https://hqpay.vn/storage/images/itSNyVmlea_1626426791.png" alt="">
+
+        <img onclick="window.location = '?supplierID=17';" src="https://hqpay.vn/storage/images/uz1wCZCiUV_1626426871.png" alt="">
+
+        <img onclick="window.location = '?supplierID=18';" src="https://hqpay.vn/storage/images/cWaSY1lhw2_1626427012.png" alt="">
+
+        <img onclick="window.location = '?supplierID=19';" src="https://hqpay.vn/storage/images/CQ32HPZqhv_1626427216.png" alt="">
+
+        <img onclick="window.location = '?supplierID=20';" src="https://hqpay.vn/storage/images/pWayViIYOm_1625037989.png" alt="">
+
+        <img onclick="window.location = '?supplierID=21';" src="https://hqpay.vn/storage/images/bCcSz3kWJw_1624871623.png" alt="">
+
+    </div>
+
+
+    <div class="cmg">
+        <hr><br>
+        <h2>Chọn mệnh giá: </h2>
+        <form name="f1" method="get" action="cart">
+            <input style="display: none" name="supplierID" value="11">
+            <input style="display: none" name="priceID" value="83">
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=11&amp;priceID=82'">
+                <div class="div-gia1">20.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">20.000&nbsp;₫</span></div>
+            </div>
+
+            <div style="border: 1px solid rgb(76, 97, 20);transform: scale(1.08);box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;" class="cmg-gia" onclick="window.location = '?supplierID=11&amp;priceID=83'">
+                <div class="div-gia1">50.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">50.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=11&amp;priceID=84'">
+                <div class="div-gia1">100.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">100.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=11&amp;priceID=85'">
+                <div class="div-gia1">200.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">200.000&nbsp;₫</span></div>
+            </div>
+
+            <div class="cmg-gia" onclick="window.location = '?supplierID=11&amp;priceID=86'">
+                <div class="div-gia1">500.000&nbsp;₫</div>
+                <div class="div-gia2">Giá: <span class="gia">500.000&nbsp;₫</span></div>
+            </div>
+
+
+
+
+            <br>
+            <div class="quantity-card">
+                <h3>Số lượng thẻ</h3>
+                <input onclick="decreaseCount(event, this)" class="btn-quan" type="button" value="-">
+                <input name="quantity" class="inp-quan" type="text" value="1">
+                <input onclick="increaseCount(event, this)" class="btn-quan" type="button" value="+">
+            </div>
+
+            <div class="add-Product">
+                <input class="Add" type="submit" value="Thêm vào giỏ hàng" <="" input="">
+                <input class="Buy" type="submit" value="Mua Ngay" onclick="f1.action = 'addorder'">
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        input.value = value;
+    }
+
+    function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10);
+        if (value > 1) {
+            value = isNaN(value) ? 0 : value;
+            value--;
+            input.value = value;
+        }
+    }
+</script>
